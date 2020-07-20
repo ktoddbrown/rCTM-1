@@ -5,10 +5,8 @@
 #' @param modelOutput A list of three data frames. Contains output of the function "runMemWithCohorts".
 #' @param inputParms A list of model parameters passed from the GUI input.
 #'
-#' @importFrom dplyr rename starts_with mutate group_by summarize filter if_else
-#' @importFrom tidyr separate  pivot_longer
-#' @import ggplot2 to make pretty plots
-#' @import rCTM to call the predictedBiomass
+#' @importFrom dplyr mutate group_by summarize
+#' @import ggplot2
 #' 
 #' @return a list of 6 plots similar to those in MEM 3.4 
 #' 
