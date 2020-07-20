@@ -114,8 +114,7 @@ shinyServer(function(input, output, session) {
     do.call(rCTM::animateCohorts, args = list(cohorts = modelOutput$cohorts,
                                  scenario = modelOutput$annualTimeSteps,
                                  duration = 20))
-  })
- 
+
   output$gif <- renderImage({
     # Return a list containing the filename
     list(src = "MEM-CTM-animated.gif",
@@ -124,6 +123,7 @@ shinyServer(function(input, output, session) {
           height = 450,
           alt = 'Click "Generate Animation". This gif may take a couple of minutes to render.'
     )}, deleteFile = TRUE)
+  })
   
 # Model Diagram Tab ---------------------------------------------------------------------  
   #Render Model diagram from an image file
@@ -137,9 +137,9 @@ shinyServer(function(input, output, session) {
   #   )}, deleteFile = FALSE)
   
   # Source diagram from ModelStructure.Rmd
-   #temp = tempfile(fileext=".R")
-   #knitr::purl(input = "../docs/ModelStructure.Rmd", output=temp)
-   #source(temp)
+   temp = tempfile(fileext=".R")
+   knitr::purl(input = "../vignettes/ModelStructure.Rmd", output=temp)
+   source(temp)
   
   output$model_diagram <- renderGrViz(model_diagram)
   

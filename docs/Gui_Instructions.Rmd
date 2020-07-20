@@ -8,7 +8,7 @@ This is the Graphic User Interface for the Marsh Equilibrium Cohort Theory Model
 
 #### __Instructions__
 
-To use this model, alter desired inputs on the "Inputs" tab and click the "Run Simulation" button in the top left. This will generate appropriate plots which can be viewed on the "Plots" tab. If you wish to run the model with the GUI inputs on your own machine, copy the code from the "R Code for Parameterization" tab after making sure the rCTM library is properly installed (see [README.md](https://github.com/tilbud/rCTM/blob/JimH-dev/README.md)).
+To use this model, alter desired inputs on the "Inputs" tab and click the "Run Simulation" button in the top left. This will generate appropriate plots which can be viewed on the "Plots" tab. If you wish to run the model with the GUI inputs on your own machine, copy the code from the "R Code for Parameterization" tab after making sure the rCTM library is properly installed (see [README.md](https://github.com/tilbud/rCTM/blob/master/README.md)).
 
 #### __Inputs__
 
