@@ -137,9 +137,9 @@ shinyServer(function(input, output, session) {
   #   )}, deleteFile = FALSE)
   
   # Source diagram from ModelStructure.Rmd
-   temp = tempfile(fileext=".R")
-   knitr::purl(input = "../docs/ModelStructure.Rmd", output=temp)
-   source(temp)
+   #temp = tempfile(fileext=".R")
+   #knitr::purl(input = "../docs/ModelStructure.Rmd", output=temp)
+   #source(temp)
   
   output$model_diagram <- renderGrViz(model_diagram)
   
