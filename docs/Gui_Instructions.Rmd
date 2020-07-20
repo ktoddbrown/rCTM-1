@@ -1,0 +1,33 @@
+---
+title: "Instructions for Modifying and Executing MEM VI"
+output: html_document
+---
+
+#### __Introduction__
+This is the Graphic User Interface for the Marsh Equilibrium Cohort Theory Model. This model draws on both the Marsh Equilibrium Model and the Cohort Theory Model. The Cohort Theory Model (CTM) is a simple method for accounting for volume and mass changes in tidal systems. This package also contains a special implementation of CTM which uses the Marsh Equilibrium Model (MEM) to drive inorganic surface sedimentation and below ground organic matter addition, dynamically as a function of sea-level.
+
+#### __Instructions__
+
+To use this model, alter desired inputs on the "Inputs" tab and click the "Run Simulation" button in the top left. This will generate appropriate plots which can be viewed on the "Plots" tab. If you wish to run the model with the GUI inputs on your own machine, copy the code from the "R Code for Parameterization" tab after making sure the rCTM library is properly installed (see [README.md](https://github.com/tilbud/rCTM/blob/JimH-dev/README.md)).
+
+#### __Inputs__
+
+Use the "Parameter Ranges" tab to find descriptions and units for any of the model inputs. The "Restore Inputs" button can be used to reset the inputs to default values. Note that the "Run Simulation" button needs to be clicked every time an input is changed in order to update the Output graphs.
+
+#### __Outputs__
+
+• Standing Biomass vs Marsh Elevation:  this is a graph of the biomass profile that is set by your choice of maximum biomass, minimum and maximum elevations.
+
+• Standing Biomass vs Time:  this is the standing biomass of marsh vegetation over time.
+
+• Depth vs Time:  this is the depth of the marsh surface below mean high water level over time. Note that the depth oscillates with a periodicity of 18.6 yr owing to the effect of the lunar nodal cycle.  You may eliminate the effects of the lunar nodel cycle by zeroing its amplitude.
+
+• MSL and Marsh Elevation vs Time:  The MSL trajectory is determined by your choice of the current rate of sea level rise and the century level sea level.  Marsh elevation is a prediction.
+
+• Organic Matter vs Depth:  this is the concentration of sediment organic matter (% of dry weight) vs sediment depth.  This is computed using sediment cohort theory (Morris and Bowden 1986).  This is a recent  addtion to MEM.  The organic matter profile that is plotted is not today's profile.  Rather, it is a forecast of the profile 100 yr into the future.   However, with the century level sea-level rise set to 100 x the current rate of sea level rise (now the default condition), and with the marsh elevation in equilibrium, you can simulate today's profile.
+
+• Change in Carbon Stock vs Time:  this is the change in fast + slow organic matter plotted over time, in other words the derivative of carbon stock with respect to time.
+
+#### __References__
+
+(Add relevant references here)
