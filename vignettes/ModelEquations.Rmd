@@ -1,0 +1,50 @@
+---
+title: "Formal Model Equations"
+author: "Jessica Hicks (jhicks1@ufl.edu)"
+date: "7/20/2020"
+output: html_document
+---
+
+## Drafting Equations
+Change of fast organic matter over time is equal to new additions (root turnover times root biomass times biomass allocation factor) minus the decay of fast organic matter (respiration).  
+$\frac{dC_{fast}}{dt} = \sum_z(f_{fast}r_{t}  B_{root}(z,t) - k_{fast}C_{fast}(z,t))$
+
+CO2/CH4 respiration is equal to the decay of fast organic matter times a conversion factor a, which denotes the conversion between organic matter mass and carbon mass of CO2.  
+$\frac{dC_{resp}}{dt} = \sum_zak_{fast}C_{fast}(z,t)$
+
+Change of slow organic matter over time is equal to new additions times one minus the fast organic matter allocation factor.
+$\frac{dC_{slow}}{dt} = (1 - f_{fast})r_{t}  B_{root}(z,t)$
+
+Total organic matter mass is equal to fast organic matter plus slow organic matter plus root biomass.  
+$C(z,t) = C_{fast}(z,t) + C_{slow}(z,t) + B_{root}(z,t)$
+
+Mineral Input is equal to the number of tides per year, times the unit area of interest, times the mean tidal volume above the marsh surface, times the suspended sediment concentration.  
+when z=0: $\frac{dC_{mineral}}{dt} = n_{tides}  A_{unit} v_{tides}  s_{ssc}$
+
+Aboveground biomass is equal to allocated biomass using a parabolic function.  
+$B_{above} = ?$
+
+Belowground biomass is equal to above ground biomass times the root to shoot ratio.  
+$B_{below} = f_{roottoshoot}B_{above}$
+
+The volume of a given cohort is equal to the sum of fast and slow organic matter mass divided by the organic matter packing density plus the mineral mass divided by the mineral packing density.  
+for each z: $\frac{dv_{cohort}}{dt} = \frac{C_{fast} + C_{slow}}{d_{organic}} + \frac{C_{mineral}}{d_{mineral}}$
+
+The marsh accretion rate is equal to the change to total volume of cohorts (the sum of the volume of each individual cohort) across time.  
+$\frac{dz_{marsh}}{dt} = \sum_z\frac{dv_{cohort}}{dt}$
+
+### Variables:
+z = elevation (down from surface)  
+t = time  
+C = mass of carbon  
+f = allocation factor, fraction  
+d = packing density  
+B = biomass  
+$r_{t}$ = root turnover   
+a = conversion factor: organic matter mass to carbon mass  
+k = decay rate  
+B = biomass  
+$A_{unit}$ = unit area of interest  
+v = volume  
+$n_{tides}$ = number of tides  
+$s_{ssc}$ = suspended sediment concentration  
